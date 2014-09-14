@@ -1,145 +1,79 @@
 <!DOCTYPE HTML>
-<head>
+<head>   <!--要与html文件兼容必须用utf8以及中文编码gb2312--> 
 <title>~~~欢迎访问~~~</title>
-    <meta http-equiv="Content-Type" content="text/html;charset=gbk">
-<body onLoad="type_text()" onFinish="type_text(reload)";>
+<meta http-equiv="Content-Type" content="text/html;charset=gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <style> 
 body{background-color:#FFDEAD;}
-
-#hati {
-	position: absolute;
-	width: 100px;
-	height: 90px;
-	left: 36.8%;
-	top: 30%;
-	-webkit-transition:All 1.5s ease-in-out;
-    -moz-transition:All 1.5s ease-in-out;
+#f{
+-webkit-transition:All 1s ease-in-out;
+   -moz-transition:All 1s ease-in-out;
+    -ms-transition:All 1s ease-in-out;
+     -o-transition:All 1s ease-in-out;		
 }
-#hati:before,
-#hati:after {
-    position: absolute;
-    content: "";
-    left: 148px;
-    top: 0;
-    width: 150px;
-    height: 240px;
-    background: red;
-    -moz-border-radius: 100px 100px 0 0;
-    border-radius: 100px 100px 0 0;
-    -webkit-transform: rotate(-45deg);
-       -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-         -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    -webkit-transform-origin: 0 100%;
-       -moz-transform-origin: 0 100%;
-        -ms-transform-origin: 0 100%;
-         -o-transform-origin: 0 100%;
-            transform-origin: 0 100%;
+#f:hover{
+cursor:pointer; 
+z-index:3;
+         -webkit-transform:scale(1.1);
+            -moz-transform:scale(1.1);
+             -ms-transform:scale(1.1);
+			  -o-transform:scale(1.1);              			 
 }
-#hati:after {
-    left: 0;
-    -webkit-transform: rotate(45deg);
-       -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-         -o-transform: rotate(45deg);
-            transform: rotate(45deg);
-    -webkit-transform-origin: 100% 100%;
-       -moz-transform-origin: 100% 100%;
-        -ms-transform-origin: 100% 100%;
-         -o-transform-origin: 100% 100%;
-            transform-origin :100% 100%;
-			z-index:3;
-			
+.hx{
+position: absolute;
+width:21.75%; 
+left: 40%;
+top: 30%;		
+border:0;                      
 }
-#hati:hover{
--webkit-transform:scale(1.1);-moz-transform:scale(1.1); cursor:pointer; z-index:3;
-}
-
-.foto {
-content:''; 
-background:url(http://m1.img.srcdd.com/farm5/d/2014/0827/10/577C1430C0931EAD1CB2EC0D21D77318_ORIG_287_373.gif) no-repeat;
- width:293px; height:389px;			
+.left {
+ width:21.75%; 		
  margin-left: 8%;
  margin-top: 5%;
-	float: left;
+ float: left; 
+ border: 0; 
+ box-shadow:0 18px 12px -12px #000;
+ }
  
-border:solid 3px #ddd; 
-box-shadow:1px 5px 18px #000;  
  
-}
-#pos{
-background:rgba(0,0,0,0.4);
-font-size:120%;
-color:#fff;
-box-shadow:1px 5px 18px #000;
-border:solid 5px #0F0F0F;
-	margin-right: 8%;
-	margin-top:9%;
-	width: 345px;
-	height: 283px;
-	float: right;	
-}
+.right{ 
+ margin-right: 8%;
+ margin-top: 11%;
+ width: 21.75%;
+ float: right;
+ border: 0; 
+ box-shadow:18px 0px 12px -12px #000;
+ }
+ 
 #footer{
 position: fixed !important;
 bottom: 0px;
 position: absolute;
 top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight));
-  margin: 0;
-  padding: 0;
-  height: 40px;
-  width:100%;
-  border-top: 1px #CCCCCC solid;
-  line-height: 40px;
-  font-size:32px;
-  text-align:center;
+ } 
+.footer{ 
+ height:40px;
+ width:100%;
+ border-top: 1px #CCCCCC solid;
+ line-height: 40px;
+ font-size:200%;
+ text-align:center;
 }
 </style>
-    </head>
-<div class="foto"></div>
-<div id="hati" onclick="window.open('http://www.fanyueciyuan.info','_self')"></div>
-
-<form>
-  <textarea name="textarea" cols=100 rows=17 readonly id="pos"></textarea>
-</form>
-<script language=Javascript><!--
-var tl=new Array(
-"                                           ",
-"            ~~~~~[翻越瓷院]~~~~~           ",
-"               By:liyangyijie              ",
-"-------------------------------------------",
-"                    也许                   ",
-"            会遇到那重无形的阻碍           ",
-"              任凭自己如何折腾             ",
-"                 都无法翻越                ",
-"               但唯有坚持不懈              ",
-"                一切才能过去               ",
-"                  (*^__^*)",
-"                                           ",
-"-------------------------------------------",
-"                                           "
-);
-var speed=60;
-var index=0; text_pos=0;
-var str_length=tl[0].length;
-var contents, row;
-function type_text()
-{ contents=''; row=Math.max(0,index-17); while(row<index) contents += tl[row++] + '\r\n'; document.forms[0].elements[0].value = contents + tl[index].substring(0,text_pos) + "|"; if(text_pos++==str_length) { text_pos=0; index++; if(index!=tl.length) { str_length=tl[index].length; setTimeout("type_text()",500); } } else setTimeout("type_text()",speed);
-}
-//-->
-</script>
-</body></head>
-
-<footer>
-<div id="footer">
-
-诚挚欢迎造访小站(*^__^*)详细还请点击红心
-    
+</head>
+<body >
+<div id="f" class="left">
+<img src=http://m1.img.srcdd.com/farm5/d/2014/0827/10/577C1430C0931EAD1CB2EC0D21D77318_ORIG_287_373.gif width=100% ></div>
+<div id="f" class="hx" onclick="window.open('http://www.fanyueciyuan.info','_self')"><f>
+<img src=http://liyangyijie.qiniudn.com/%40%2Fpic%2Fpng%2F%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20140829132630.png width=100% ></div>
+<div id="f" class="right"><f>
+<img src=http://liyangyijie.qiniudn.com/%40%2Fpic%2Fpng%2F%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20140829122757%E5%89%AF%E6%9C%AC1.png width=100% ></div>
+<div id="footer" class="footer">
+点红心^o^访小站
 </div>
-
-</footer>
-</html>
 <div style="position:fixed; bottom:0px;right:0px; display: inline-block; font:normal 12px oswald;text-align: center; cursor: pointer; margin:2px; padding:3px 4px;">
-<embed src="http://www.fanyueciyuan.info/archives/210/" width="0" height="0" border="0" loop="-2"></embed >
+<embed src="http://www.fanyueciyuan.info/test/beijingyinyue.html" width="0" height="0" border="0" loop="-2"></embed >
 </div>
-
+<div style="display:none;">  <!--去掉下面加代码的广告-->  
+</body>                      
+</html>
